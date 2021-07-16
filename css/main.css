@@ -22,6 +22,7 @@
   align-items: center;
   gap: 20px;
   margin: 0 calc(50% - 300px);
+  text-align: center;
 }
 .logo {
   height: 40px;
@@ -38,13 +39,26 @@
   color: grey;
 }
 
-.clock-placeholder {
-  width: 600px;
-  height: 70px;
-  font-size: 30px;
-  color: red;
-  text-align: center;
+.clock {
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
 }
+
+.clock > .time {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.clock > .time > .value {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
 body > div > div > form {
   display: flex;
   flex-direction: column;
@@ -88,6 +102,29 @@ body > div > div > form {
 
 .button:hover {
   box-shadow: 0 2px 9px grey;
+}
+
+.mouse {
+  display: inline-block;
+  width: 35px;
+  height: 58px;
+  border: 5px solid white;
+  border-radius: 18px;
+  position: relative;
+}
+
+.mouse > .wheel-scroll {
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  background-color: white;
+  border-radius: 3px;
+  position: absolute;
+  top: 7px; /*pozicija kai darai relative absolute */
+  left: calc(
+    50% - 3px
+  ); /*vieta nuo kaire = 50 procentu kiek vietos liko minus puse objekto plocio*/
+  /*NEED TO MAKE JAVASCRCIPT ANIMATION*/
 }
 
 /*temporary*/
